@@ -22,3 +22,9 @@ spec:
             requests:
               memory: 256Mi
               cpu: "0.2"
+          volumeMounts:
+            - mountPath: /app/story
+              name: story-volume
+      volumes:
+        - name: story-volume
+          emptyDir: {}
