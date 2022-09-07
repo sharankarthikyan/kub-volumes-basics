@@ -14,7 +14,10 @@ spec:
     spec:
       containers:
         - name: story
-          image: sharank10/kub-data-demo:2
+          image: sharank10/kub-data-demo # Kubernetes will take image from remote only.
+          env:
+            - name: STORY_FOLDER
+              value: 'story'
           resources:
             limits:
               memory: 512Mi
